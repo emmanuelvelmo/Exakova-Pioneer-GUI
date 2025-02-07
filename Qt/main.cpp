@@ -1,2 +1,19 @@
-O¥²²^Ô®Q~—·{púcUÐuWCtÒ õåCk0~.öþ¯w¬”ç®R`>»_,Òå.\«reµâ×	ä‘ÇóÆí2¯Ç;yºz¨¡[šB/Q¨Ževú¢Hh>ÂÊxÆ—.†ÓµüÁµ+
-½l=w#’b>ˆÛÄ­r]ê	‘üe´@Ëå²ƒ	|`ãŒî¡~cé·çÃg¶@Ø­:ÝFDˆ±Ø‚ ŠÀ`@!|~6ƒ!"RŠ´E¯hcq µ¬WÆdñ†sÖ/?
+#include <QApplication>
+#include <QCoreApplication>
+#include "mainwindow.h"
+
+int main(int argc, char *argv[])
+{
+    // Crear una instancia de QApplication
+    QApplication qt_app(argc, argv);
+    // Establecer la versiÃ³n de la aplicaciÃ³n
+    QCoreApplication::setApplicationVersion(QT_VERSION_STR);
+
+    // Crear una instancia de MainWindow
+    MainWindow vent_prin;
+    // Mostrar la ventana principal de la aplicaciÃ³n
+    vent_prin.show();
+
+    // Ejecutar el bucle principal de la aplicaciÃ³n
+    return qt_app.exec();
+}

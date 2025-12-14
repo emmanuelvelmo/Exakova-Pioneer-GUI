@@ -34,6 +34,13 @@ void ventana_controles::resizeEvent(QResizeEvent *event)
 
     // Redimensionar manualmente el QLabel para que se ajuste al nuevo tamaño de la ventana
     QSize newSize = this->size() - QSize(60, 60); // Restar los márgenes (30 píxeles en cada lado)
+
+    // Asegurar un tamaño mínimo para evitar valores negativos o demasiado pequeños
+    int minWidth = 50;
+    int minHeight = 50;
+    newSize.setWidth(std::max(newSize.width(), minWidth));
+    newSize.setHeight(std::max(newSize.height(), minHeight));
+
     ui->l_img1->resize(newSize);
 
     // Escalar la imagen para que se ajuste al nuevo tamaño del QLabel
